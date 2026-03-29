@@ -7,6 +7,12 @@
 </p>
 
 <p align="center">
+  <img src="https://img.shields.io/badge/platform-Windows-blue?logo=windows" alt="Windows">
+  <img src="https://img.shields.io/badge/version-1.0.0-green" alt="Version">
+  <img src="https://img.shields.io/github/license/Rounted/Brightness-Manager" alt="License">
+</p>
+
+<p align="center">
   <a href="#features">Features</a> &bull;
   <a href="#installation">Installation</a> &bull;
   <a href="#development">Development</a> &bull;
@@ -16,6 +22,8 @@
 
 ---
 
+> **Windows 10/11 only** — Uses native Win32 APIs for per-monitor overlay rendering and system tray integration.
+
 ## Features
 
 - **Multi-monitor support** — Control brightness and color temperature per monitor or all at once
@@ -23,40 +31,35 @@
 - **Color temperature filter** — Warm overlay from 1000K to 6500K to reduce blue light
 - **System tray integration** — Runs in background, double-click to open, right-click for quick menu
 - **Auto-start with Windows** — Optional startup toggle
-- **15 languages** — English, Turkce, Deutsch, Francais, Espanol, Italiano, Portugues, Russian, Japanese, Korean, Chinese, Arabic, Hindi, Nederlands, Polski
+- **15 languages** — English, Türkçe, Deutsch, Français, Español, Italiano, Português, Русский, 日本語, 한국어, 中文, العربية, हिन्दी, Nederlands, Polski
 
 ## Installation
 
-### From Release
+### Download
 
-Download the latest installer from [Releases](https://github.com/Rounted/Brightness-Manager/releases).
+Download the latest installer from [Releases](https://github.com/Rounted/Brightness-Manager/releases):
 
-### Build from Source (Tauri)
+| File | Description |
+|------|-------------|
+| `Brightness-Manager_1.0.0_x64-setup.exe` | NSIS installer (recommended) |
+| `Brightness-Manager_1.0.0_x64_en-US.msi` | MSI installer |
 
-**Requirements:** [Rust](https://rustup.rs/), [Node.js](https://nodejs.org/)
+### Build from Source
+
+**Requirements:** [Rust](https://rustup.rs/)
 
 ```bash
-cd src-tauri
 cargo install tauri-cli
 cargo tauri build
 ```
 
-The installer will be in `src-tauri/target/release/bundle/nsis/`.
-
-### Build from Source (PyQt5)
-
-**Requirements:** [Python 3.10+](https://python.org/)
-
-```bash
-pip install -r requirements.txt
-python main.py
-```
+Installers will be generated in `src-tauri/target/release/bundle/`.
 
 ## Development
 
 ```
-brightness-app/
-├── src/                    # Tauri web frontend
+Brightness-Manager/
+├── src/                    # Web frontend
 │   ├── index.html          # Main UI
 │   ├── main.js             # App logic
 │   ├── lang.js             # Translations (15 languages)
@@ -68,12 +71,13 @@ brightness-app/
 │       ├── config.rs       # Config persistence
 │       ├── overlay.rs      # Per-monitor overlay windows
 │       └── tray.rs         # System tray menu
-├── main.py                 # PyQt5 entry point
-├── tray_app.py             # PyQt5 tray integration
-├── settings_window.py      # PyQt5 settings UI
-├── gamma_controller.py     # PyQt5 overlay controller
-├── config.py               # PyQt5 config management
-└── lang.py                 # PyQt5 translations
+└── resources/              # App icons
+```
+
+### Run in development mode
+
+```bash
+cargo tauri dev
 ```
 
 ## Languages
@@ -81,21 +85,21 @@ brightness-app/
 | Language | Code |
 |----------|------|
 | English | `en` |
-| Turkce | `tr` |
+| Türkçe | `tr` |
 | Deutsch | `de` |
-| Francais | `fr` |
-| Espanol | `es` |
+| Français | `fr` |
+| Español | `es` |
 | Italiano | `it` |
-| Portugues | `pt` |
-| Russian | `ru` |
-| Japanese | `ja` |
-| Korean | `ko` |
-| Chinese | `zh` |
-| Arabic | `ar` |
-| Hindi | `hi` |
+| Português | `pt` |
+| Русский | `ru` |
+| 日本語 | `ja` |
+| 한국어 | `ko` |
+| 中文 | `zh` |
+| العربية | `ar` |
+| हिन्दी | `hi` |
 | Nederlands | `nl` |
 | Polski | `pl` |
 
 ## License
 
-MIT
+This project is licensed under the [MIT License](LICENSE).

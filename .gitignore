@@ -1,0 +1,33 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.egg-info/
+dist/
+build/
+*.spec
+
+# Rust / Tauri
+src-tauri/target/
+src-tauri/gen/schemas/
+
+# Node
+node_modules/
+
+# Installer
+installer_output/
+*.iss
+
+# IDE
+.vscode/
+.idea/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Claude Code
+.claude/
+
+# Misc
+*.log

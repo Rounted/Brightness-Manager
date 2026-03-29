@@ -1,0 +1,56 @@
+STRINGS = {
+    "tr": {
+        "app_title": "Brightness App",
+        "screens": "EKRANLAR",
+        "brightness": "Parlaklık",
+        "temperature": "Renk Sıcaklığı",
+        "presets": "HAZIR MODLAR",
+        "filter_on": "Filtre Aktif",
+        "filter_off": "Filtre Pasif",
+        "quit": "Çıkış",
+        "settings": "Ayarlar",
+        "modes": "Modlar",
+        "disable_filter": "Filtreyi Kapat",
+        "enable_filter": "Filtreyi Aç",
+        "startup": "Windows ile Başlat",
+        "language": "DİL",
+        "active": "Aktif",
+        "passive": "Pasif",
+        "all": "Tümü",
+        "preset_day": "Gündüz",
+        "preset_office": "Ofis",
+        "preset_night": "Gece",
+        "preset_reading": "Okuma",
+        "preset_movie": "Film",
+    },
+    "en": {
+        "app_title": "Brightness App",
+        "screens": "SCREENS",
+        "brightness": "Brightness",
+        "temperature": "Color Temperature",
+        "presets": "PRESETS",
+        "filter_on": "Filter On",
+        "filter_off": "Filter Off",
+        "quit": "Quit",
+        "settings": "Settings",
+        "modes": "Modes",
+        "disable_filter": "Disable Filter",
+        "enable_filter": "Enable Filter",
+        "startup": "Start with Windows",
+        "language": "LANGUAGE",
+        "active": "Active",
+        "passive": "Passive",
+        "all": "All",
+        "preset_day": "Day",
+        "preset_office": "Office",
+        "preset_night": "Night",
+        "preset_reading": "Reading",
+        "preset_movie": "Movie",
+    },
+}
+
+PRESET_KEYS = ["day", "office", "night", "reading", "movie"]
+
+
+def t(key, lang="tr"):
+    return STRINGS.get(lang, STRINGS["tr"]).get(key, key)

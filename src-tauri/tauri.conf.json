@@ -1,0 +1,52 @@
+{
+  "$schema": "https://raw.githubusercontent.com/nicedoc/tauri/master/packages/tauri-schema/src/schema.json",
+  "productName": "Brightness Manager",
+  "version": "1.0.0",
+  "identifier": "com.brightness.controller",
+  "build": {
+    "frontendDist": "../src",
+    "beforeDevCommand": "",
+    "beforeBuildCommand": ""
+  },
+  "app": {
+    "windows": [
+      {
+        "label": "settings",
+        "title": "Brightness Manager",
+        "url": "index.html",
+        "width": 560,
+        "height": 320,
+        "resizable": false,
+        "maximizable": false,
+        "decorations": false,
+        "transparent": false,
+        "visible": false,
+        "alwaysOnTop": true,
+        "skipTaskbar": true,
+        "center": true
+      }
+    ],
+    "trayIcon": {
+      "id": "main-tray",
+      "iconPath": "icons/tray_icon.png",
+      "tooltip": "Brightness Manager"
+    },
+    "withGlobalTauri": true,
+    "security": {
+      "csp": null
+    }
+  },
+  "bundle": {
+    "active": true,
+    "targets": ["nsis"],
+    "icon": [
+      "icons/icon.ico",
+      "icons/icon.png"
+    ],
+    "windows": {
+      "nsis": {
+        "installMode": "currentUser"
+      }
+    }
+  }
+}

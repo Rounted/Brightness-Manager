@@ -55,7 +55,7 @@ html, body {
   flex-shrink: 0;
 }
 
-.titlebar-icon { font-size: 18px; color: var(--accent); margin-right: 8px; }
+.titlebar-icon { width: 18px; height: 18px; margin-right: 8px; }
 .titlebar-text { font-size: 13px; font-weight: 600; color: var(--text-primary); flex: 1; }
 
 .lang-select-wrap {

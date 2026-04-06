@@ -161,7 +161,7 @@ html, body {
 
 /* ── Presets ── */
 .presets-grid {
-  display: flex; flex-wrap: wrap; gap: 6px;
+  display: grid; grid-template-columns: 1fr 1fr; gap: 6px;
 }
 
 .preset-pill {

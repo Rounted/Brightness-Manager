@@ -11,6 +11,7 @@ const PRESETS = {
   night: { brightness: 70, temperature: 3400 },
   reading: { brightness: 60, temperature: 4200 },
   movie: { brightness: 80, temperature: 5000 },
+  gaming: { brightness: 90, temperature: 6000 },
 };
 
 // Cache all DOM refs upfront
@@ -34,6 +35,7 @@ const $presetOffice = document.getElementById("preset-office");
 const $presetNight = document.getElementById("preset-night");
 const $presetReading = document.getElementById("preset-reading");
 const $presetMovie = document.getElementById("preset-movie");
+const $presetGaming = document.getElementById("preset-gaming");
 const $presetPills = document.querySelectorAll(".preset-pill");
 
 // Throttle helper: fires at most once per animation frame
@@ -194,6 +196,7 @@ function refreshTexts() {
   $presetNight.textContent = T("preset_night");
   $presetReading.textContent = T("preset_reading");
   $presetMovie.textContent = T("preset_movie");
+  $presetGaming.textContent = T("preset_gaming");
 }
 
 // Build screen buttons

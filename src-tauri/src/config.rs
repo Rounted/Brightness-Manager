@@ -43,6 +43,7 @@ pub fn presets() -> &'static HashMap<String, Preset> {
         m.insert("night".into(), Preset { brightness: 70, temperature: 3400 });
         m.insert("reading".into(), Preset { brightness: 60, temperature: 4200 });
         m.insert("movie".into(), Preset { brightness: 80, temperature: 5000 });
+        m.insert("gaming".into(), Preset { brightness: 90, temperature: 6000 });
         m
     })
 }

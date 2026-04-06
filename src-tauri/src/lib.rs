@@ -56,13 +56,16 @@ fn set_language(lang: String, app: tauri::AppHandle, state: tauri::State<'_, App
 }
 
 #[tauri::command]
-fn set_autostart(enabled: bool, app: tauri::AppHandle) {
+fn set_autostart(enabled: bool, app: tauri::AppHandle, state: tauri::State<'_, AppState>) {
     let autostart = app.autolaunch();
     if enabled {
         let _ = autostart.enable();
     } else {
         let _ = autostart.disable();
     }
+    let mut config = state.config.lock().unwrap();
+    config.autostart = enabled;
+    config.save();
 }
 
 #[tauri::command]

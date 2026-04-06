@@ -22,6 +22,7 @@ const STRINGS = {
     preset_night: "Night",
     preset_reading: "Reading",
     preset_movie: "Movie",
+    preset_gaming: "Gaming",
   },
   tr: {
     app_title: "Brightness Manager",
@@ -46,6 +47,7 @@ const STRINGS = {
     preset_night: "Gece",
     preset_reading: "Okuma",
     preset_movie: "Film",
+    preset_gaming: "Oyun",
   },
   de: {
     app_title: "Brightness Manager",
@@ -70,6 +72,7 @@ const STRINGS = {
     preset_night: "Nacht",
     preset_reading: "Lesen",
     preset_movie: "Film",
+    preset_gaming: "Spiel",
   },
   fr: {
     app_title: "Brightness Manager",
@@ -94,6 +97,7 @@ const STRINGS = {
     preset_night: "Nuit",
     preset_reading: "Lecture",
     preset_movie: "Film",
+    preset_gaming: "Jeu",
   },
   es: {
     app_title: "Brightness Manager",
@@ -118,6 +122,7 @@ const STRINGS = {
     preset_night: "Noche",
     preset_reading: "Lectura",
     preset_movie: "Película",
+    preset_gaming: "Juego",
   },
   it: {
     app_title: "Brightness Manager",
@@ -142,6 +147,7 @@ const STRINGS = {
     preset_night: "Notte",
     preset_reading: "Lettura",
     preset_movie: "Film",
+    preset_gaming: "Gioco",
   },
   pt: {
     app_title: "Brightness Manager",
@@ -166,6 +172,7 @@ const STRINGS = {
     preset_night: "Noite",
     preset_reading: "Leitura",
     preset_movie: "Filme",
+    preset_gaming: "Jogo",
   },
   ru: {
     app_title: "Brightness Manager",
@@ -190,6 +197,7 @@ const STRINGS = {
     preset_night: "Ночь",
     preset_reading: "Чтение",
     preset_movie: "Кино",
+    preset_gaming: "Игра",
   },
   ja: {
     app_title: "Brightness Manager",
@@ -214,6 +222,7 @@ const STRINGS = {
     preset_night: "夜間",
     preset_reading: "読書",
     preset_movie: "映画",
+    preset_gaming: "ゲーム",
   },
   ko: {
     app_title: "Brightness Manager",
@@ -238,6 +247,7 @@ const STRINGS = {
     preset_night: "밤",
     preset_reading: "독서",
     preset_movie: "영화",
+    preset_gaming: "게임",
   },
   zh: {
     app_title: "Brightness Manager",
@@ -262,6 +272,7 @@ const STRINGS = {
     preset_night: "夜间",
     preset_reading: "阅读",
     preset_movie: "电影",
+    preset_gaming: "游戏",
   },
   ar: {
     app_title: "Brightness Manager",
@@ -286,6 +297,7 @@ const STRINGS = {
     preset_night: "ليل",
     preset_reading: "قراءة",
     preset_movie: "فيلم",
+    preset_gaming: "لعبة",
   },
   hi: {
     app_title: "Brightness Manager",
@@ -310,6 +322,7 @@ const STRINGS = {
     preset_night: "रात",
     preset_reading: "पठन",
     preset_movie: "फ़िल्म",
+    preset_gaming: "गेम",
   },
   nl: {
     app_title: "Brightness Manager",
@@ -334,6 +347,7 @@ const STRINGS = {
     preset_night: "Nacht",
     preset_reading: "Lezen",
     preset_movie: "Film",
+    preset_gaming: "Spel",
   },
   pl: {
     app_title: "Brightness Manager",
@@ -358,6 +372,7 @@ const STRINGS = {
     preset_night: "Noc",
     preset_reading: "Czytanie",
     preset_movie: "Film",
+    preset_gaming: "Gra",
   },
 };
 

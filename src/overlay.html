@@ -17,12 +17,17 @@
   <div id="overlay"></div>
   <script>
     const { listen } = window.__TAURI__.event;
+    const { invoke } = window.__TAURI__.core;
     const overlay = document.getElementById("overlay");
 
-    listen("set-overlay-color", (event) => {
-      const { r, g, b, a } = event.payload;
+    function applyColor({ r, g, b, a }) {
       overlay.style.backgroundColor = `rgba(${r}, ${g}, ${b}, ${a / 255})`;
-    });
+    }
+
+    listen("set-overlay-color", (event) => applyColor(event.payload));
+
+    // Pull initial color in case we missed the startup emit before listener was ready
+    invoke("get_overlay_color").then(applyColor).catch(() => {});
   </script>
 </body>
 </html>

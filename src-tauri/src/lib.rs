@@ -13,6 +13,12 @@ fn get_config(state: tauri::State<'_, AppState>) -> Config {
 }
 
 #[tauri::command]
+fn get_overlay_color(state: tauri::State<'_, AppState>) -> overlay::OverlayColor {
+    let config = state.config.lock().unwrap();
+    overlay::calculate_overlay_color(config.brightness, config.temperature)
+}
+
+#[tauri::command]
 fn set_brightness(value: u32, app: tauri::AppHandle, state: tauri::State<'_, AppState>) {
     state.update_and_apply(&app, |c| c.brightness = value.clamp(10, 100));
 }
@@ -90,6 +96,7 @@ pub fn run() {
         .manage(AppState::new())
         .invoke_handler(tauri::generate_handler![
             get_config,
+            get_overlay_color,
             set_brightness,
             set_temperature,
             toggle_filter,

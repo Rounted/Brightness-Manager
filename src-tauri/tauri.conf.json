@@ -1,7 +1,7 @@
 {
   "$schema": "https://raw.githubusercontent.com/nicedoc/tauri/master/packages/tauri-schema/src/schema.json",
   "productName": "Brightness Manager",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "identifier": "com.brightness.controller",
   "build": {
     "frontendDist": "../src",
